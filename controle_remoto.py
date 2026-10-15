@@ -22,7 +22,6 @@ class ControleRemoto:
             self.__televisao.volta_canal()
 
 
-
     def volume_mais(self):
         if self.__pilha.consumir_energia():
             self.__televisao.aumenta_volume()

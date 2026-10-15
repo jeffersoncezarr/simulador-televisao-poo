@@ -40,7 +40,6 @@ def main():
                         controle.input_canal(c)
                     except Exception as err:
                         print(f'[red]{err.__class__.__name__}: {err}[/]')
-
                 case '0':
                     break
                 case _:

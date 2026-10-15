@@ -7,13 +7,13 @@ class Televisao:
     """
     canal_max = 5
     canal_min = 1
-
     vol_max = 5
     vol_min = 1
 
     @staticmethod
     def mensagem_desligada()-> str:
         return 'TELEVISÃO DESLIGADA!'
+
 
     @classmethod
     def mostra_canais(cls)-> None:
@@ -43,8 +43,6 @@ class Televisao:
                 self.__canal_atual = canal
             else:
                 raise IndexError('Canal não encontrado!')
-        else:
-            Televisao.mensagem_desligada()
 
 
     def passa_canal(self)-> None:
@@ -53,8 +51,6 @@ class Televisao:
                 self.__canal_atual = Televisao.canal_min
             else:
                 self.__canal_atual += 1
-        else:
-            Televisao.mensagem_desligada()
 
 
     def volta_canal(self)-> None:
@@ -63,8 +59,6 @@ class Televisao:
                 self.__canal_atual = Televisao.canal_max
             else:
                 self.__canal_atual -= 1
-        else:
-            Televisao.mensagem_desligada()
 
 
     @property
@@ -81,16 +75,12 @@ class Televisao:
         if self.__ligada:
             if self.__vol_atual < Televisao.vol_max:
                 self.__vol_atual += 1
-        else:
-            Televisao.mensagem_desligada()
 
 
     def diminui_volume(self):
         if self.__ligada:
             if self.__vol_atual > Televisao.vol_min:
                 self.__vol_atual -= 1
-        else:
-            Televisao.mensagem_desligada()
 
 
     def mostra_tv(self):
